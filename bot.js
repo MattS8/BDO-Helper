@@ -4,9 +4,17 @@ const Config = require('./config.json')
 const bot = new Discord.Client();
 const fs = require('fs')
 
+// Glitch Hosting Constants
+const http = require('http');
+const express = require('express');
+const GlitchApp = express();
+
 var newAuth = undefined
 
 var Members = new Map()
+
+const version = 'v0.0.2'
+console.log('-------- BDO Helper ' + version + ' --------')
 
 function getMemberFromName(name) {
     Members.forEach(member => {
@@ -21,6 +29,16 @@ bot.login(auth.token);
 
 bot.on('ready', () => {
     console.info(`Logged in as ${bot.user.tag}!`);
+
+    GlitchApp.get("/", (request, response) => {
+        console.log(Date.now() + " Ping Received");
+        response.sendStatus(200);
+    });
+    GlitchApp.listen(process.env.PORT);
+    setInterval(() => {
+        http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+    }, 280000);
+
   });
 
 bot.on('message', message => {
