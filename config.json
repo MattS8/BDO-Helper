@@ -1,0 +1,24 @@
+﻿{
+  "token": "NzAxNTU3MjA3MzA0NTAzMzk4.XrCp2A.IJJRA7_-V0JLuXD9Dz70mxQKhRc",
+  "questColor": 13158500,
+  "identifier": "&",
+  "sheets": {
+    "members": {
+      "name": "Nasty Member Info",
+      "id": "1Qm2fayL2g-PWYFo38Hr9roTvlpXH1E1ww5bB4bcCAps",
+      "headerRows": 1
+    },
+    "questLog": {
+      "name": "Guild Quest Log",
+      "id": "1Qm2fayL2g-PWYFo38Hr9roTvlpXH1E1ww5bB4bcCAps"
+    }
+  },
+  "dateFormat": {
+    "weekday": "long",
+    "month": "2-digit",
+    "day": "2-digit",
+    "hour": "numeric",
+    "minute": "2-digit",
+    "timeZone": "America/Los_Angeles"
+  }
+}
